@@ -11,6 +11,12 @@
         <content type="html"><![CDATA[<p>this is a Test !</p>]]></content>
       
       
+      <categories>
+          
+          <category> hexo测试 </category>
+          
+      </categories>
+      
       
     </entry>
     
@@ -30,6 +36,39 @@
     
   
   
+    
+    
+    <entry>
+      <title>关于我</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[<p>御剑乘风来</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>category</title>
+      <link href="/category/index.html"/>
+      <url>/category/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
     
   
 </search>
