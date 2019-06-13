@@ -8,7 +8,7 @@
       <link href="/2019/06/13/2019613001/"/>
       <url>/2019/06/13/2019613001/</url>
       
-        <content type="html"><![CDATA[<p>图片测试</p><img src="/2019/06/13/2019613001/06/13/2019613001/001.jpg" title="this is an test image">]]></content>
+        <content type="html"><![CDATA[<p>图片测试</p><img src="/2019/06/13/2019613001/06/13/2019613001/001.jpg"><p>markdown引用<br><img src="/2019/06/13/2019613001/001.jpg" alt></p>]]></content>
       
       
       
