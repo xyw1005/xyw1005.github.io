@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content="扯淡时间到了">
-    <meta name="keywords" content>
+    <meta name="keywords" content=",测试">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -235,11 +235,11 @@
     <meta property="og:title" content="2019613001 | 凡尘">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="扯淡时间到了">
-    
+    <meta property="og:article:tag" content="测试"> 
 
     
         <meta property="article:published_time" content="Thu Jun 13 2019 21:57:26 GMT+0800">
-        <meta property="article:modified_time" content="Thu Jun 13 2019 23:36:33 GMT+0800">
+        <meta property="article:modified_time" content="Sat Jun 22 2019 13:57:31 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/2019/06/13/2019613001/index.html",
     "headline": "2019613001",
     "datePublished": "Thu Jun 13 2019 21:57:26 GMT+0800",
-    "dateModified": "Thu Jun 13 2019 23:36:33 GMT+0800",
+    "dateModified": "Sat Jun 22 2019 13:57:31 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "凡尘",
@@ -280,7 +280,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": "",
+    "keywords": ",测试",
     "description": "扯淡时间到了",
 }
 </script>
@@ -356,8 +356,17 @@
                 
     <!-- Paradox Post Header -->
     
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://raw.githubusercontent.com/xyw1005/xyw1005.github.io/master/img/background2.jpg)">
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
     
             <p class="article-headline-p">
                 2019613001
@@ -396,6 +405,15 @@
     
 
     <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/测试/">测试</a>
+    </li></ul>
     
 
     <!-- Share -->
@@ -645,7 +663,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/hexo测试/">hexo测试<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/hexo测试/">hexo测试<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/分类测试/">分类测试<span class="sidebar_archives-count">1</span></a>
             </li></ul>
         </li>
         

@@ -24,6 +24,18 @@
         <content type="html"><![CDATA[<p>图片测试</p><img src="/2019/06/13/2019613001/001.jpg"><p>测试2</p><img src="/2019/06/13/2019613001/001.jpg"><p>markdown引用<br><img src="/2019613001/001.jpg" alt></p>]]></content>
       
       
+      <categories>
+          
+          <category> 分类测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
       
     </entry>
     
