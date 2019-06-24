@@ -4,25 +4,13 @@
   
     
     <entry>
-      <title>互联网分层那些事</title>
+      <title></title>
       <link href="/2019/06/24/%E4%BA%92%E8%81%94%E7%BD%91%E5%88%86%E5%B1%82%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
       <url>/2019/06/24/%E4%BA%92%E8%81%94%E7%BD%91%E5%88%86%E5%B1%82%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
       
-        <content type="html"><![CDATA[<h3 id="互联网分层那些事"><a href="#互联网分层那些事" class="headerlink" title="互联网分层那些事"></a>互联网分层那些事</h3>]]></content>
+        <content type="html"><![CDATA[<hr><p>title: 互联网分层那些事<br>date: 2019-06-24 22:13:56<br>tags: HTTP<br>categories:</p><ul><li>基础概念<br>i—<h4 id="互联网分层那些事"><a href="#互联网分层那些事" class="headerlink" title="互联网分层那些事"></a>互联网分层那些事</h4></li></ul><p>对于互联网分层,偶尔也能说出其中的几层的名称,但是从来没有完整的了解过。7层？5层？4层？头都大了…<br>更加甭谈每层的作用了.</p><p>从何学起呢,怎么才能最快切入,理解呢?<br>博客,我想这是最快的方式了吧,站在别人的肩膀上,借鉴大牛的视野.</p><p>找到了<strong><em>阮一峰</em></strong>的博客,有两篇文章讲分层,通俗易懂,嗯,从这里开始吧.<br>附上文章原文链接：<br>1.<a href="http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html" target="_blank" rel="noopener">互联网协议入门-</a><br>2.<a href="http://www.ruanyifeng.com/blog/2012/06/internet_protocol_suite_part_ii.html" target="_blank" rel="noopener">互联网协议入门二</a></p>]]></content>
       
       
-      <categories>
-          
-          <category> 基础概念 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> HTTP </tag>
-            
-        </tags>
       
     </entry>
     
