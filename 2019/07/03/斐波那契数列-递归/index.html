@@ -244,7 +244,7 @@
 
     
         <meta property="article:published_time" content="Wed Jul 03 2019 22:54:36 GMT+0800">
-        <meta property="article:modified_time" content="Wed Jul 03 2019 23:39:17 GMT+0800">
+        <meta property="article:modified_time" content="Wed Jul 03 2019 23:50:41 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -267,7 +267,7 @@
     "mainEntityOfPage": "http://yoursite.com/2019/07/03/斐波那契数列-递归/index.html",
     "headline": "斐波那契数列-递归",
     "datePublished": "Wed Jul 03 2019 22:54:36 GMT+0800",
-    "dateModified": "Wed Jul 03 2019 23:39:17 GMT+0800",
+    "dateModified": "Wed Jul 03 2019 23:50:41 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "凡尘",
@@ -499,9 +499,23 @@
         <h3 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h3><p>斐波那契数列(Fibonacci sequence),又称为<strong>黄金分割</strong>数列,因数学家 <strong>列昂纳多.斐波那契</strong>以兔子繁殖为例子而引入,又称为”兔子数列”.</p>
 <p>指的是这样一个数列:1、1、2、3、5、8、13、21、34……在现代物理、化学等领域都有直接的应用.</p>
 <p>生活中的斐波那契数列:观察延龄草、野玫瑰、南美血根草、大波斯菊、金凤花、耧斗菜、百合花、蝴蝶花的花瓣，可以发现它们花瓣数目具有斐波那契数：3、5、8、13、21、</p>
-<h3 id="用递归实现斐波那契数列"><a href="#用递归实现斐波那契数列" class="headerlink" title="用递归实现斐波那契数列"></a>用递归实现斐波那契数列</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class FibonacciTest&#123;</span><br><span class="line">	public static void main(String[] arg)&#123;</span><br><span class="line">		//1 1 2 3 5</span><br><span class="line">		int i=fibonacci(5);</span><br><span class="line">		System.out.println(i);</span><br><span class="line">	&#125;</span><br><span class="line">	public static fibonacci(int i)&#123;</span><br><span class="line">		if(i==1||i==2)&#123;</span><br><span class="line">			return 1;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			reurn fibonacci(i-2)+fibonacci(i-1);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="用递归实现斐波那契数列"><a href="#用递归实现斐波那契数列" class="headerlink" title="用递归实现斐波那契数列"></a>用递归实现斐波那契数列</h3><pre><code>
+public class FibonacciTest{
+    public static void main(String[] arg){
+        //1 1 2 3 5
+        int i=fibonacci(5);
+        System.out.println(i);
+    }
+    public static fibonacci(int i){
+        if(i==1||i==2){
+            return 1;
+        }else{
+            reurn fibonacci(i-2)+fibonacci(i-1);
+        }
+    }
 
-
+}
+</code></pre>
         
     
 
