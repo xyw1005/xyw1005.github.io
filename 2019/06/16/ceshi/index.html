@@ -497,7 +497,7 @@
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
+<script src="/js/src/md5.min.js"></script>
 <script>
     var gitalk = new Gitalk({
             clientID: 'c6d65643a1c74612239a',
@@ -507,7 +507,7 @@
             admin: ['xyw1005'],
             // facebook-like distraction free mode
             distractionFreeMode: false,
-	    id: 'Gitalk初始化报错"validation failed"'  
+	    id: md5(location.pathname)  
       })
    gitalk.render('gitalk-container')
 </script>
