@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>选择排序</title>
+      <link href="/2019/07/16/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/"/>
+      <url>/2019/07/16/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/</url>
+      
+        <content type="html"><![CDATA[<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>最简单的排序之一<br>核心思想：每次找出最小的数,执行n-1轮</p><pre><code>public class SelectSort {    public static void main(String[] args) {        int[] arr=new int[] {4,7,2,9,1,6,5,56,76,44,22,55};        selectSort(arr);        System.err.println(Arrays.toString(arr));    }    public static void selectSort(int[] arr) {        for(int i=0;i&lt;arr.length-1;i++) {            //最小的数的索引            int minIndex=i;            for(int j=i+1;j&lt;arr.length;j++) {                if(arr[minIndex]&gt;arr[j]) {                    minIndex=j;                }            }            //第i个不是最小的,则替换            if(minIndex!=i) {                int temp=arr[i];                arr[i]=arr[minIndex];                arr[minIndex]=temp;            }        }    }}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 选择排序 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>希尔排序</title>
+      <link href="/2019/07/16/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/"/>
+      <url>/2019/07/16/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>我叫MT</title>
       <link href="/2019/07/16/%E6%88%91%E5%8F%ABMT/"/>
       <url>/2019/07/16/%E6%88%91%E5%8F%ABMT/</url>
