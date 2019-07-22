@@ -8,7 +8,7 @@
       <link href="/2019/07/22/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
       <url>/2019/07/22/%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
       
-        <content type="html"><![CDATA[<h3 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h3><p><strong>二叉树</strong>：任何一个节点的子节点数量不超过2,分为左节点、右节点</p><p><strong>完全二叉树</strong>：所有子节点都在最后一层,且节点的总数为2^n-1,n为层数</p><p><strong>满二叉树</strong>： 所有叶子节点都在最后一层或者倒数第二层,且最后一层的叶子结点在左边连续,倒数第二层的叶子节点在右边连续</p><hr><img src="/2019/07/22/二叉树/tree-5-state.png"><img src="/2019/07/22/二叉树/tree-pic.png"><img src="/2019/07/22/二叉树/3-bianli.png">]]></content>
+        <content type="html"><![CDATA[<h3 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h3><p><strong>二叉树</strong>：任何一个节点的子节点数量不超过2,分为左节点、右节点</p><p><strong>完全二叉树</strong>：所有子节点都在最后一层,且节点的总数为2^n-1,n为层数</p><p><strong>满二叉树</strong>： 所有叶子节点都在最后一层或者倒数第二层,且最后一层的叶子结点在左边连续,倒数第二层的叶子节点在右边连续</p><hr><img src="/2019/07/22/二叉树/tree-5-state.png"><img src="/2019/07/22/二叉树/tree-pic.png"><img src="/2019/07/22/二叉树/3-traversal.png">]]></content>
       
       
       <categories>
