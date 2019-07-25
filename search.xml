@@ -8,9 +8,21 @@
       <link href="/2019/07/25/%E8%B5%AB%E5%A4%AB%E6%9B%BC%E6%A0%91/"/>
       <url>/2019/07/25/%E8%B5%AB%E5%A4%AB%E6%9B%BC%E6%A0%91/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h3 id="赫夫曼树"><a href="#赫夫曼树" class="headerlink" title="赫夫曼树"></a>赫夫曼树</h3><p><strong>赫夫曼树</strong>,又称最优二叉树：它是n个带权叶子结点构成的所有二叉树中,带权路径长度最小的二叉树.</p><p><strong>树的带权路径长度 WPL</strong>：树种所有叶子结点的带权路径长度之和.</p><p><strong>叶子节点的带权路径值</strong>：叶子结点的权值乘以根节点到叶子结点的路径(层)</p><img src="/2019/07/25/赫夫曼树/huffman-pic.png"><img src="/2019/07/25/赫夫曼树/node-node.png"><img src="/2019/07/25/赫夫曼树/huffman-tree-node.png"><p>节点定义：</p><pre><code>public class Node implements Comparable&lt;Node&gt; {    int value;    Node left;    Node right;    public Node(int value) {        this.value=value;    }    @Override    public int compareTo(Node o) {        return this.value-o.value;    }    @Override    public String toString() {        return &quot;Node [value=&quot; + value + &quot;]&quot;;    }}</code></pre><p>创建赫夫曼树</p><pre><code>public class HuffmanTree {    public static void main(String[] args) {        int[] arr=new int[] {3,7,29,14,8,11,5,23};        Node huffManTree=huffmanTree(arr);        System.err.println(huffManTree);    }    public static Node huffmanTree(int[] arr) {        List&lt;Node&gt; list=new ArrayList&lt;&gt;();        //构建树        for(int value:arr) {            list.add(new Node(value));        }        while(list.size()&gt;1) {            //排序            Collections.sort(list);            //查找出最小的树            Node left=list.get(list.size()-1);            //查找出次小的树            Node right=list.get(list.size()-2);            //组成新树            Node newNode=new Node(left.value+right.value);            list.remove(left);            list.remove(right);            //添加新树            list.add(newNode);        }        return list.get(0);    }}</code></pre>]]></content>
       
       
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 赫夫曼树 </tag>
+            
+        </tags>
       
     </entry>
     
