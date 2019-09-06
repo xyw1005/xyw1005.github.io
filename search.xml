@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>SpringBoot-logback-spring.xml</title>
+      <link href="/2019/09/06/SpringBoot-logback-spring-xml/"/>
+      <url>/2019/09/06/SpringBoot-logback-spring-xml/</url>
+      
+        <content type="html"><![CDATA[<h3 id="SpringBoot-logback日志配置"><a href="#SpringBoot-logback日志配置" class="headerlink" title="SpringBoot logback日志配置"></a>SpringBoot logback日志配置</h3><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;configuration&gt;    &lt;property name=&quot;server_name&quot; value=&quot;cloudShop&quot; /&gt;    &lt;property name=&quot;log_dir&quot; value=&quot;/logback_logs/cloudShop&quot; /&gt;    &lt;property name=&quot;maxFileSize&quot; value=&quot;2MB&quot; /&gt;    &lt;property name=&quot;maxHistory&quot; value=&quot;180&quot; /&gt;    &lt;property name=&quot;charset&quot; value=&quot;utf-8&quot; /&gt;    &lt;!-- 控制台输出 --&gt;    &lt;appender name=&quot;STDOUT&quot; class=&quot;ch.qos.logback.core.ConsoleAppender&quot;&gt;        &lt;encoder class=&quot;ch.qos.logback.classic.encoder.PatternLayoutEncoder&quot;&gt;            &lt;!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符--&gt;            &lt;pattern&gt;%date{yyyy-MM-dd HH:mm:ss} | %highlight(%-5level) | %boldYellow(%thread) | %boldGreen(%logger) | %msg%n&lt;/pattern&gt;            &lt;charset&gt;${charset}&lt;/charset&gt;        &lt;/encoder&gt;    &lt;/appender&gt;    &lt;!-- info日志 appender  --&gt;    &lt;appender name=&quot;INFO&quot; class=&quot;ch.qos.logback.core.rolling.RollingFileAppender&quot;&gt;        &lt;rollingPolicy class=&quot;ch.qos.logback.core.rolling.TimeBasedRollingPolicy&quot;&gt;            &lt;!-- 按天回滚 daily --&gt;            &lt;fileNamePattern&gt;${log_dir}/${server_name}-info-%d{yyyy-MM-dd}-%i.log&lt;/fileNamePattern&gt;            &lt;!-- 日志最大的历史 180天 --&gt;            &lt;maxHistory&gt;${maxHistory}&lt;/maxHistory&gt;            &lt;timeBasedFileNamingAndTriggeringPolicy class=&quot;ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP&quot;&gt;                &lt;!-- maxFileSize:这是活动文件的大小，默认值是10MB，这里设置为2MB --&gt;                &lt;maxFileSize&gt;${maxFileSize}&lt;/maxFileSize&gt;            &lt;/timeBasedFileNamingAndTriggeringPolicy&gt;        &lt;/rollingPolicy&gt;        &lt;encoder class=&quot;ch.qos.logback.classic.encoder.PatternLayoutEncoder&quot;&gt;            &lt;!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符--&gt;            &lt;pattern&gt;%d{yyyy-MM-dd HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n&lt;/pattern&gt;            &lt;charset&gt;${charset}&lt;/charset&gt;        &lt;/encoder&gt;        &lt;filter class=&quot;ch.qos.logback.classic.filter.LevelFilter&quot;&gt;            &lt;!-- 只打印info日志 --&gt;            &lt;level&gt;INFO&lt;/level&gt;            &lt;onMatch&gt;ACCEPT&lt;/onMatch&gt;            &lt;onMismatch&gt;DENY&lt;/onMismatch&gt;        &lt;/filter&gt;    &lt;/appender&gt;    &lt;!-- 出错日志 appender  --&gt;    &lt;appender name=&quot;ERROR&quot; class=&quot;ch.qos.logback.core.rolling.RollingFileAppender&quot;&gt;        &lt;rollingPolicy class=&quot;ch.qos.logback.core.rolling.TimeBasedRollingPolicy&quot;&gt;            &lt;!-- 按天回滚 daily --&gt;            &lt;fileNamePattern&gt;${log_dir}/${server_name}-error-%d{yyyy-MM-dd}-%i.log&lt;/fileNamePattern&gt;            &lt;!-- 日志最大的历史 180天 --&gt;            &lt;maxHistory&gt;${maxHistory}&lt;/maxHistory&gt;            &lt;timeBasedFileNamingAndTriggeringPolicy class=&quot;ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP&quot;&gt;                &lt;!-- maxFileSize:这是活动文件的大小，默认值是10MB，这里设置为2MB --&gt;                &lt;maxFileSize&gt;${maxFileSize}&lt;/maxFileSize&gt;            &lt;/timeBasedFileNamingAndTriggeringPolicy&gt;        &lt;/rollingPolicy&gt;        &lt;encoder class=&quot;ch.qos.logback.classic.encoder.PatternLayoutEncoder&quot;&gt;            &lt;!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符--&gt;            &lt;pattern&gt;%d{yyyy-MM-dd HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n&lt;/pattern&gt;            &lt;charset&gt;${charset}&lt;/charset&gt;        &lt;/encoder&gt;        &lt;filter class=&quot;ch.qos.logback.classic.filter.LevelFilter&quot;&gt;            &lt;!-- 只打印错误日志 --&gt;            &lt;level&gt;ERROR&lt;/level&gt;            &lt;onMatch&gt;ACCEPT&lt;/onMatch&gt;            &lt;onMismatch&gt;DENY&lt;/onMismatch&gt;        &lt;/filter&gt;    &lt;/appender&gt;    &lt;!-- 测试环境+开发环境. 多个使用逗号隔开. --&gt;    &lt;!--&lt;springProfile name=&quot;test,dev&quot;&gt;        &lt;logger name=&quot;com.wiaoong&quot; level=&quot;debug&quot; /&gt;    &lt;/springProfile&gt;--&gt;    &lt;!-- 生产环境. --&gt;    &lt;!--&lt;springProfile name=&quot;prod&quot;&gt;        &lt;logger name=&quot;com.wiaoong&quot; level=&quot;info&quot; /&gt;    &lt;/springProfile&gt;--&gt;    &lt;logger name=&quot;org.springframework&quot; level=&quot;WARN&quot; /&gt;    &lt;logger name=&quot;org.hibernate&quot; level=&quot;WARN&quot; /&gt;    &lt;!--控制台和日志文件输出级别--&gt;    &lt;root level=&quot;INFO&quot; additivity = &quot;false&quot;&gt;        &lt;appender-ref ref=&quot;STDOUT&quot; /&gt;        &lt;appender-ref ref=&quot;INFO&quot; /&gt;        &lt;appender-ref ref=&quot;ERROR&quot; /&gt;    &lt;/root&gt;&lt;/configuration&gt;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> SpringBoot </category>
+          
+          <category> logback </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SpringBoot </tag>
+            
+            <tag> logback </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SpringBoot application.proerties</title>
+      <link href="/2019/09/06/SpringBoot-application-proerties/"/>
+      <url>/2019/09/06/SpringBoot-application-proerties/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Springboot-配置文件4中位置及其优先级"><a href="#Springboot-配置文件4中位置及其优先级" class="headerlink" title="Springboot 配置文件4中位置及其优先级"></a>Springboot 配置文件4中位置及其优先级</h3><img src="/2019/09/06/SpringBoot-application-proerties/springboot-application.png"><p>同时存在,则使用优先级高的</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> springboot </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> springboot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>赫夫曼树</title>
       <link href="/2019/07/25/%E8%B5%AB%E5%A4%AB%E6%9B%BC%E6%A0%91/"/>
       <url>/2019/07/25/%E8%B5%AB%E5%A4%AB%E6%9B%BC%E6%A0%91/</url>
